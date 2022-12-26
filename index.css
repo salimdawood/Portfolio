@@ -1,0 +1,232 @@
+:root{
+  --primary-color:#2C3333;
+  --secondary-1-color:#395B64;
+  --secondary-2-color:#A5C9CA;
+  --light-color:#E7F6F2;
+}
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  min-height: 100vh;
+  color: var(--primary-color);
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  height: 70px;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+nav svg{
+  cursor: pointer;
+  fill: var(--primary-color);
+}
+main{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.main-info-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+.main-info{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.main-info h1{
+  position: relative;
+  font-size: 2.5rem;
+  letter-spacing: .3rem;
+}
+.main-info h3{
+  font-weight: 500;
+}
+.main-info h1::before{
+  content: attr(section-title);
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+.main-info-container button{
+  padding: 15px 10px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.main-info-container button:first-of-type{
+  border-radius: 10px 0 0 10px;
+}
+.main-info-container button:last-of-type{
+  border-radius: 0 10px 10px 0;
+}
+.main-info-container button:hover{
+  background-color: var(--secondary-2-color);
+  color: var(--primary-color);
+}
+.main-info ul{
+  list-style:none;
+}
+.main-info ul li{
+  padding: 10px 0;
+}
+.main-info ul li a{
+  font-weight: bold;
+  color: inherit;
+}
+.main-illustration{
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+.main-illustration svg{
+  width: 100%;
+  max-width: 500px;
+  height: 70%;
+  max-height: 300px;
+  display: none;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+.main-illustration::before{
+  content: '';
+  display: inline-block;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--secondary-2-color);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: .3;
+}
+.right-animation{
+  animation: right-swipe 2s alternate;
+}
+.left-animation{
+  animation: left-swipe 2s alternate;
+}
+@keyframes right-swipe {
+  from{
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes left-swipe {
+  from{
+    transform: translateX(15px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.main-art{
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: 0;
+  z-index: -1;
+  background-color: var(--secondary-2-color);
+  width: 200px;
+}
+footer{
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pagination .dash{
+  width: 30px;
+  height: 7px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.pagination .dash.active,.pagination .dash:hover{
+  background-color: var(--secondary-2-color);
+}
+footer .social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer svg{
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  fill: var(--primary-color);
+}
+@media screen and (max-width:850px) {
+  .main-info h1{
+    font-size: 1.7rem;
+    letter-spacing: .3rem;
+  }
+  .main-illustration{
+    flex: 1.5;
+  } 
+}
+@media screen and (max-width:650px) {
+  main{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-illustration::before{
+    content: unset;
+  }
+}
+@media screen and (max-width:400px) {
+  footer{
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+}
