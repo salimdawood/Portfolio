@@ -1,14 +1,14 @@
 //Theme Logic
 var light_icon = document.getElementById('light-icon');
 var dark_icon = document.getElementById('dark-icon');
-light_icon.style.display='none';
+dark_icon.style.display='none';
 light_icon.onclick=light_theme;
 dark_icon.onclick=dark_theme;
 
-var primary_color='#2C3333';
-var secondary_1_color='#395B64';
-var secondary_2_color='#A5C9CA';
-var light_color='#E7F6F2';
+var light_color='#2C3333';
+var secondary_2_color='#395B64';
+var secondary_1_color='#A5C9CA';
+var primary_color='#E7F6F2';
 
 //Illustration Logic
 var illustrations = document.querySelectorAll('.illustration');
@@ -32,19 +32,19 @@ go_to(prev_page);
 
 //Theme chnage Functionality
 function dark_theme(){
-  document.documentElement.style.setProperty('--light-color', primary_color);
-  document.documentElement.style.setProperty('--primary-color', light_color);
-  document.documentElement.style.setProperty('--secondary-1-color', secondary_2_color);
-  document.documentElement.style.setProperty('--secondary-2-color', secondary_1_color);
+  document.documentElement.style.setProperty('--primary-color', primary_color);
+  document.documentElement.style.setProperty('--light-color', light_color);
+  document.documentElement.style.setProperty('--secondary-1-color', secondary_1_color);
+  document.documentElement.style.setProperty('--secondary-2-color', secondary_2_color);
 
   dark_icon.style.display='none';
   light_icon.style.display='inline';
 }
 function light_theme(){
-  document.documentElement.style.setProperty('--primary-color', primary_color);
-  document.documentElement.style.setProperty('--light-color', light_color);
-  document.documentElement.style.setProperty('--secondary-1-color', secondary_1_color);
-  document.documentElement.style.setProperty('--secondary-2-color', secondary_2_color);
+  document.documentElement.style.setProperty('--light-color', primary_color);
+  document.documentElement.style.setProperty('--primary-color', light_color);
+  document.documentElement.style.setProperty('--secondary-1-color', secondary_2_color);
+  document.documentElement.style.setProperty('--secondary-2-color', secondary_1_color);
 
   light_icon.style.display='none';
   dark_icon.style.display='inline';

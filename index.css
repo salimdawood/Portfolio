@@ -1,8 +1,8 @@
 :root{
-  --primary-color:#2C3333;
-  --secondary-1-color:#395B64;
-  --secondary-2-color:#A5C9CA;
-  --light-color:#E7F6F2;
+  --light-color:#2C3333;
+  --secondary-2-color:#395B64;
+  --secondary-1-color:#A5C9CA;
+  --primary-color:#E7F6F2;
 }
 *,*::before,*::after{
   padding: 0;
@@ -228,5 +228,44 @@ footer svg{
     flex-direction: column;
     justify-content: center;
     gap: 25px;
+  }
+}
+/*Preloader*/
+.preloader{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.domino{
+  width: 40px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--secondary-1-color);
+}
+.domino:first-of-type{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: d1 2s infinite linear;
+  background-color: var(--light-color);
+}
+@keyframes d1 {
+  0%{
+    left: 0px;
+  }
+  50%{
+    left: 100px;
+  }
+  100%{
+    left: 200px;
   }
 }
