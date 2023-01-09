@@ -12,4 +12,4 @@ This website is a Portfolio, listing my skills and projects accomplished so far.
 
 ## Deploy
 
-This project is deployed on [netlify](https://tiny-swan-ff39bc.netlify.app/).
+This project is deployed on [Github Pages](https://salimdawood.github.io/Portfolio/).
