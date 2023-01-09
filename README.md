@@ -1,1 +1,17 @@
 # Portfolio
+
+## Overview
+
+This website is a Portfolio, listing my skills and projects done so far.
+
+I used HTML, CSS, and Vanilla Js to build this website keeping it simple.
+
+## Screenshots
+
+<img src="https://github.com/salimdawood/Media/blob/master/portfolio/p2.png" width="100%" alt="Main" loading="lazy"/>
+
+<img src="https://github.com/salimdawood/Media/blob/master/portfolio/p1.png" width="100%" alt="Skills" loading="lazy"/>
+
+## Deploy
+
+This project is deployed on [netlify](https://tiny-swan-ff39bc.netlify.app/).
